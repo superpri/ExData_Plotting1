@@ -22,9 +22,11 @@ plot1 <- {
     csv2 <- subset(csv, Date == as.Date('01/02/2007',origin=as.Date("1900-01-01"), format="%d/%m/%Y") 
                         | Date == as.Date('02/02/2007',origin=as.Date("1900-01-01"), format="%d/%m/%Y"))
     
+    png("plot1.png", width = 480, height = 480)
     hist(csv2$Global_active_power, 
          freq=TRUE, 
          col="red", 
          main="Global Active Power",
          xlab="Global Active Power (kilowatts)")
+    dev.off()
 }
