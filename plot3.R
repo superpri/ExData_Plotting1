@@ -27,8 +27,8 @@ plot3 <- {
     
     png("plot3.png", width = 480, height = 480)
     plot(dateTime, csv2$Sub_metering_1, type = "l", main = "", ylab = "Energy sub metering", xlab = "")
-    lines(dateTime,csv2$Sub_metering_2, type = "l", main = "", ylab = "", xlab = "", col = "blue")
-    lines(dateTime,csv2$Sub_metering_3, type = "l", main = "", ylab = "", xlab = "", col ="red")
-    legend("topright", col = c("black", "red", "blue"), lty= "solid", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3") )
+    lines(dateTime,csv2$Sub_metering_3, type = "l", main = "", ylab = "", xlab = "", col ="blue")
+    lines(dateTime,csv2$Sub_metering_2, type = "l", main = "", ylab = "", xlab = "", col = "red")
+    legend("topright", col = c("black", "blue", "red"), lty= "solid", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3") )
     dev.off()
 }
